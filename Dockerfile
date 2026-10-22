@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY server.js ./
-COPY fonts ./fonts
+COPY timer.ttf ./fonts/timer.ttf
 ENV TIMER_FONT_PATH=/app/fonts/timer.ttf
 ENV PORT=8080
 EXPOSE 8080
